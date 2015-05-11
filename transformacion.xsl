@@ -3,7 +3,7 @@
   <xsl:template match="/">
     <html>
       <head>
-        <title>Ejer_1</title>
+        <title>Ejer_3</title>
       </head>
       <body>
         <table border="1">
@@ -13,7 +13,8 @@
             <th>Año</th>
           </tr>
           <xsl:for-each select="//cd">
-          <xsl:if test="year&gt;1980">
+          <xsl:sort select="year" />
+          <xsl:if test="year&gt;1979 and year&lt;1990">
             <tr>
               <td>
                 <xsl:value-of select="title" />
